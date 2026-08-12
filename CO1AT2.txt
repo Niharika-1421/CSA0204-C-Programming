@@ -1,0 +1,102 @@
+CO1AT2 TEST
+
+1. Largest of Three Numbers Using if-else
+
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a > b && a > c)
+        printf("Largest = %d", a);
+    else if (b > a && b > c)
+        printf("Largest = %d", b);
+    else
+        printf("Largest = %d", c);
+    return 0;
+}
+
+
+2. Multiplication Table
+
+#include <stdio.h>
+int main()
+{
+    int n, i;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}
+
+
+3. Check Whether a 3-Digit Number is Armstrong
+
+#include <stdio.h>
+int main()
+{
+    int n, temp, digit, sum = 0;
+    printf("Enter a 3-digit number: ");
+    scanf("%d", &n);
+    temp = n;
+    while (temp > 0)
+    {
+        digit = temp % 10;
+        sum = sum + digit * digit * digit;
+        temp = temp / 10;
+    }
+    if (sum == n)
+        printf("Armstrong Number");
+    else
+        printf("Not an Armstrong Number");
+
+    return 0;
+}
+
+4. Addition, Subtraction, Multiplication and Division Using switch
+#include <stdio.h>
+int main()
+{
+    int a, b, choice;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    printf("\n1. Addition");
+    printf("\n2. Subtraction");
+    printf("\n3. Multiplication");
+    printf("\n4. Division");
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+    switch (choice)
+    {
+        case 1:
+            printf("Addition = %d", a + b);
+            break;
+
+        case 2:
+            printf("Subtraction = %d", a - b);
+            break;
+
+        case 3:
+            printf("Multiplication = %d", a * b);
+            break;
+
+        case 4:
+            if (b != 0)
+                printf("Division = %d", a / b);
+            else
+                printf("Division by zero is not possible");
+            break;
+
+        default:
+            printf("Invalid choice");
+    }
+
+    return 0;
+}
